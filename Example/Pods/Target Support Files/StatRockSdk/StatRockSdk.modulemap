@@ -1,0 +1,6 @@
+framework module StatRockSdk {
+  umbrella header "StatRockSdk-umbrella.h"
+
+  export *
+  module * { export * }
+}
