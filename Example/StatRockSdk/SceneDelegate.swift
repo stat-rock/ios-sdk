@@ -18,8 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         
         
-        let vc = ViewController()
-        window?.rootViewController = vc
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc : ViewController = (storyboard.instantiateViewController (withIdentifier: "Main") as? ViewController)!
+        let nvc = UINavigationController(rootViewController: vc)
+        window?.rootViewController = nvc
         window?.makeKeyAndVisible()
     }
     

@@ -16,11 +16,16 @@ public protocol StatRockDelegate {
     func onAdError(msg: String?)
 }
 
+public enum StatRockType{
+    case inPage
+}
+
 public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler {
     private var placement:String!
     private var config:String!
     private var delegate:StatRockDelegate?
     private var changeConfig = false
+    private var type: StatRockType?
     
     public init() {
         let config = WKWebViewConfiguration()
@@ -30,26 +35,38 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
         config.userContentController = contentController
         config.preferences.javaScriptCanOpenWindowsAutomatically = true
         config.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypes.init(rawValue: 0)
-        super.init(frame: CGRect.zero, configuration: config)
-        
+        if #available(iOS 15.4, *) {
+            config.preferences.isElementFullscreenEnabled = false
+        } else {
+        }
+        super.init(frame: .zero, configuration: config)
         contentController.add(self, name: "toggleMessageHandler")
         
-        isOpaque = false
-        backgroundColor = .clear
-        navigationDelegate = self
-        uiDelegate = self
-        isUserInteractionEnabled = true
-        allowsLinkPreview = true
-        isHidden = true
-        scrollView.backgroundColor = .clear
-        setScrollEnabled(enabled: false)
+        initialize()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func load(placement: String, delegate: StatRockDelegate? = nil){
+    private func initialize(){
+        isOpaque = false
+        backgroundColor = .clear
+        navigationDelegate = self
+        uiDelegate = self
+        isUserInteractionEnabled = true
+        allowsLinkPreview = true
+        scrollView.backgroundColor = .clear
+        setScrollEnabled(enabled: false)
+    }
+    
+    public func load(placement: String, type: StatRockType? = nil, delegate: StatRockDelegate? = nil){
+        self.type = type
+        
+        if type == StatRockType.inPage{
+            isHidden = true
+        }
+        
         let deviceId = UIDevice.current.identifierForVendor!.uuidString
         var dnt = true
         if #available(iOS 14, *) {
@@ -59,12 +76,12 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
         let bundleId = Bundle.main.bundleIdentifier ?? ""
         let appName = Bundle.applicationName
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
-
+        
         let locManager = CLLocationManager()
         var lat = 0.0
         var lon = 0.0
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-           CLLocationManager.authorizationStatus() ==  .authorizedAlways{
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways{
             lat = locManager.location?.coordinate.latitude ?? 0.0
             lon = locManager.location?.coordinate.latitude ?? 0.0
         }
@@ -95,8 +112,45 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
         }
         task.resume()
     }
-
-    public override func layoutSubviews() {
+    
+    public func enoughPercentsForDeactivation(visibilityPercents: Int)->Bool {
+        var percents = 30;
+        if let config = config {
+            if let config = try? JSONSerialization.jsonObject(with: self.config.data(using: .utf8)!, options: []) {
+                let map = config as? [String:Any]
+                
+                if let settings = map?["settings"] {
+                    let settings = settings as? [String:Any]
+                    if let advertising = settings?["advertising"] {
+                        let advertising = advertising as? [String:Any]
+                        if let playPercent = advertising?["playPercent"] {
+                            percents = playPercent as! Int
+                        }
+                    }
+                }
+            }
+        }
+        
+        return visibilityPercents <= percents;
+    }
+    
+    public func getVisibilityPercents(scroll: UIView?)->Int{
+        if let scroll = scroll{
+            let visibleRect = CGRectIntersection(frame, scroll.bounds)
+            return (100 * Int(CGRectGetHeight(visibleRect))) / Int(frame.height)
+        }
+        return 0
+    }
+    
+    public func pause(){
+        evaluateJavaScript("pause()")
+    }
+    
+    public func resume(){
+        evaluateJavaScript("resume()")
+    }
+    
+    public override func layoutSubviews(){
         super.layoutSubviews()
         
         if let _ = placement, changeConfig {
@@ -140,11 +194,11 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
     }
     
     public func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-         if let url = navigationAction.request.url {
-             UIApplication.shared.open(url)
-         }
-         return nil
-     }
+        if let url = navigationAction.request.url {
+            UIApplication.shared.open(url)
+        }
+        return nil
+    }
     
     
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -152,15 +206,19 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
             if let event = messageBody["event"] as? String {
                 switch(event){
                 case "AdLoaded":
-                    self.delegate!.onAdLoaded()
+                    self.delegate?.onAdLoaded()
                 case "AdStarted":
-                    isHidden = false
-                    self.delegate!.onAdStarted()
+                    if type == StatRockType.inPage{
+                        isHidden = false
+                    }
+                    self.delegate?.onAdStarted()
                 case "AdStopped":
-                    isHidden = true
-                    self.delegate!.onAdStopped()
+                    if type == StatRockType.inPage{
+                        isHidden = true
+                    }
+                    self.delegate?.onAdStopped()
                 case "AdError":
-                    self.delegate!.onAdError(msg: messageBody["message"] as? String)
+                    self.delegate?.onAdError(msg: messageBody["message"] as? String)
                 default:
                     break
                 }

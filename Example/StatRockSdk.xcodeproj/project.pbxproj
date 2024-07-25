@@ -12,6 +12,10 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		C52C2A062BCFF3B50049A45E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C2A052BCFF3B50049A45E /* SceneDelegate.swift */; };
+		C53227342C4FACAB000E072E /* InPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53227332C4FACAB000E072E /* InPageViewController.swift */; };
+		C53227382C4FAF7F000E072E /* InPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53227372C4FAF7F000E072E /* InPage.storyboard */; };
+		C532273A2C4FCC10000E072E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53227392C4FCC10000E072E /* Main.storyboard */; };
+		C53FFE332C525B7D0062480C /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53FFE322C525B7D0062480C /* CustomViewController.swift */; };
 		E61AF6B8AF1C6D35525A1B45 /* Pods_StatRockSdk_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434E22138782368FE8050517 /* Pods_StatRockSdk_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		AB45F03B8B23A13C93FAC99B /* Pods-StatRockSdk_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StatRockSdk_Tests.debug.xcconfig"; path = "Target Support Files/Pods-StatRockSdk_Tests/Pods-StatRockSdk_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B629927972776830EF8B815D /* Pods-StatRockSdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StatRockSdk_Example.debug.xcconfig"; path = "Target Support Files/Pods-StatRockSdk_Example/Pods-StatRockSdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C52C2A052BCFF3B50049A45E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C53227332C4FACAB000E072E /* InPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPageViewController.swift; sourceTree = "<group>"; };
+		C53227372C4FAF7F000E072E /* InPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InPage.storyboard; sourceTree = "<group>"; };
+		C53227392C4FCC10000E072E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C53FFE322C525B7D0062480C /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		C8C2A7FD1F27E0F2187CA872 /* Pods-StatRockSdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StatRockSdk_Example.release.xcconfig"; path = "Target Support Files/Pods-StatRockSdk_Example/Pods-StatRockSdk_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E167BEB3BBF6B5D491A36DE8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,9 +88,13 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				C53FFE322C525B7D0062480C /* CustomViewController.swift */,
+				C53227332C4FACAB000E072E /* InPageViewController.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				C52C2A052BCFF3B50049A45E /* SceneDelegate.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				C53227372C4FAF7F000E072E /* InPage.storyboard */,
+				C53227392C4FCC10000E072E /* Main.storyboard */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -179,8 +191,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53227382C4FAF7F000E072E /* InPage.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				C532273A2C4FCC10000E072E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,8 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53227342C4FACAB000E072E /* InPageViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				C53FFE332C525B7D0062480C /* CustomViewController.swift in Sources */,
 				C52C2A062BCFF3B50049A45E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
