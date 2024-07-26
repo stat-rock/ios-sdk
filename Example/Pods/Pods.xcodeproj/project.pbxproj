@@ -3,91 +3,72 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		006DA0F02EB0DCD232454449712AAFDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		10A9F9B5D83F0F42C37BBD8AA6A7A958 /* StatRockSdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 541801F940190117B61D0A128AE8C5E4 /* StatRockSdk-dummy.m */; };
-		1FF1FFED03EDD8EFB255D58CB5847FCC /* Pods-StatRockSdk_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3E7A10ED30278CCC8D013B22E43953 /* Pods-StatRockSdk_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2663D94FFAD34165814A64A855A7B3E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		2E85C21AFD62FAA35C4EF4796B1CB57E /* StatRockSdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CCDEEEA3FD5D16CC7E9C94AFB758F84 /* StatRockSdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E2BA0AD6C62EBA03C632D3985C88AD4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0EC1B604EAA7601BEAE9E182A659A2 /* UIViewExtension.swift */; };
+		344C869FA818500C7C0CC512977EC602 /* StatRockScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBDA36BDBC7CAA25CCF96A3C2947E50 /* StatRockScrollViewDelegate.swift */; };
 		4707EDBA192A7A136649BE64A8ED0410 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		4BDD7972E5321D5E4298FE98D5CC728C /* Pods-StatRockSdk_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5175B8083F67DCAF110A131FF826694B /* Pods-StatRockSdk_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B7CABF16B234B1D72F3FA3F5E1C1105 /* Pods-StatRockSdk_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F56B6DE317C01539119CCA1DF54D8FD7 /* Pods-StatRockSdk_Example-dummy.m */; };
-		C52C29FD2BCFF08C0049A45E /* StatRockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C29FC2BCFF08C0049A45E /* StatRockView.swift */; };
-		C52C2A002BCFF14C0049A45E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C29FF2BCFF14C0049A45E /* BundleExtension.swift */; };
-		C52C2A042BCFF1860049A45E /* WKWebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C2A032BCFF1860049A45E /* WKWebViewExtension.swift */; };
-		C532273E2C4FE99A000E072E /* StatRockScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C532273D2C4FE99A000E072E /* StatRockScrollViewDelegate.swift */; };
-		C5AD4A882C510A8800452954 /* StatRockViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AD4A872C510A8800452954 /* StatRockViewContainer.swift */; };
-		C5AD4A8A2C5121D400452954 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AD4A892C5121D400452954 /* UIViewExtension.swift */; };
-		E7D507458B73D6AE0CFA29D2EDE612BA /* Pods-StatRockSdk_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C268041EAA8E7AEDBDC0A3CBFA5845 /* Pods-StatRockSdk_Tests-dummy.m */; };
+		4BDD7972E5321D5E4298FE98D5CC728C /* Pods-StatRockSdk_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16A6FDE78ABBB5BE689DB611C4BBAC01 /* Pods-StatRockSdk_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		584570929AF251EE9DE8BD98075857A8 /* StatRockSdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D153076012B3E5275AA3126C386DBF /* StatRockSdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EEB8D604CDB9BB291C01D9BE5B106F5 /* StatRockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB73588BE28CDEDC1589BD242708D80 /* StatRockView.swift */; };
+		65030FBAA706DA2B898CC7103025E119 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8B7CABF16B234B1D72F3FA3F5E1C1105 /* Pods-StatRockSdk_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 964D574AD1827DDBDE7C6E2357F943AA /* Pods-StatRockSdk_Example-dummy.m */; };
+		AC436F838E931054B3B2976F882FDE86 /* StatRockViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FBE8FB6A6AB589E614B6609CC92370 /* StatRockViewContainer.swift */; };
+		D61184E7F2F1F9C644D60F13E94910CA /* StatRockSdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C0D6E744513D2D32FFA7DC848ED8F /* StatRockSdk-dummy.m */; };
+		D9CAD3A068D3FF0ACDF74DA7A1B92150 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DAE22A838FAF4519F7B38091EC099 /* BundleExtension.swift */; };
+		F57CBEED23A7D135FBAF68AE0294738F /* WKWebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF31000A9A7D7D0FB041109AF7F2CD /* WKWebViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		50A9C4A84BE3842157766ECDDCA0165A /* PBXContainerItemProxy */ = {
+		ACFE04A5BD57796FED8A2654DA5F3023 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 721AF778D79F4BD945F4B4A3DEC24695;
 			remoteInfo = StatRockSdk;
 		};
-		51DE04B5411B143E0C5511ADF00B09E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 096DB0614C6ED36B2EE6ED1665FA5AD4;
-			remoteInfo = "Pods-StatRockSdk_Example";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AA562BF11EC66514399DC53E494650B /* Pods-StatRockSdk_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StatRockSdk_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		0B98C086A6BF97B051C05D4617FE8D8C /* Pods-StatRockSdk_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StatRockSdk_Tests.modulemap"; sourceTree = "<group>"; };
-		0EC79F5A0FFE9365511F879A0683135F /* Pods-StatRockSdk_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StatRockSdk_Example.modulemap"; sourceTree = "<group>"; };
-		1B3E7A10ED30278CCC8D013B22E43953 /* Pods-StatRockSdk_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StatRockSdk_Tests-umbrella.h"; sourceTree = "<group>"; };
-		1DC5604265CD6B712A6F19588E327D97 /* Pods-StatRockSdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StatRockSdk_Example.release.xcconfig"; sourceTree = "<group>"; };
-		320F61B3525E5914213BC172FEC73197 /* Pods_StatRockSdk_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StatRockSdk_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		34503E7FE472054A70DAB528A0852725 /* StatRockSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StatRockSdk.release.xcconfig; sourceTree = "<group>"; };
-		377770DAAF59197A423EA5C0485174DB /* Pods-StatRockSdk_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StatRockSdk_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3DD1895C33FB3BFBD8FE75058BFC1B34 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		49C268041EAA8E7AEDBDC0A3CBFA5845 /* Pods-StatRockSdk_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StatRockSdk_Tests-dummy.m"; sourceTree = "<group>"; };
-		5175B8083F67DCAF110A131FF826694B /* Pods-StatRockSdk_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StatRockSdk_Example-umbrella.h"; sourceTree = "<group>"; };
-		5337F0230A2446289AEC087D399C6394 /* Pods-StatRockSdk_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StatRockSdk_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		541801F940190117B61D0A128AE8C5E4 /* StatRockSdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StatRockSdk-dummy.m"; sourceTree = "<group>"; };
-		57A93EEFE829C9903A689DEAF36E3BDB /* Pods_StatRockSdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StatRockSdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B6631226DFFC1698C0E6B5C2D62131E /* StatRockSdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StatRockSdk-prefix.pch"; sourceTree = "<group>"; };
-		5FFC24525B254687BB62EAF6EACCB21D /* StatRockSdk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "StatRockSdk-Info.plist"; sourceTree = "<group>"; };
-		6760D3A3E55725D704A2C4D491EA06B0 /* Pods-StatRockSdk_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StatRockSdk_Example-Info.plist"; sourceTree = "<group>"; };
-		68736C5B1A4263C01384676D29800AA3 /* Pods-StatRockSdk_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StatRockSdk_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		68967E965159D279D827C8A0DF621127 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		16A6FDE78ABBB5BE689DB611C4BBAC01 /* Pods-StatRockSdk_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StatRockSdk_Example-umbrella.h"; sourceTree = "<group>"; };
+		1F62F5EB681D71B9BA6FAD550407EF36 /* Pods-StatRockSdk_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StatRockSdk_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		36F2C92BE10425309689F0D79F56F33B /* Pods-StatRockSdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StatRockSdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4AD0E89ABB1B4D959B982CAA12F02F34 /* Pods-StatRockSdk_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StatRockSdk_Example-frameworks.sh"; sourceTree = "<group>"; };
+		4C5366BE0F85673A2AEB6575A353B66B /* Pods-StatRockSdk_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StatRockSdk_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4D1C0D6E744513D2D32FFA7DC848ED8F /* StatRockSdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StatRockSdk-dummy.m"; sourceTree = "<group>"; };
+		528964C8BFD32ADCD70F2E6AAD5B5607 /* Pods-StatRockSdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StatRockSdk_Example.release.xcconfig"; sourceTree = "<group>"; };
+		548C03D3E9ABB4FEE62DCAD1ADB07E26 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		57A93EEFE829C9903A689DEAF36E3BDB /* Pods-StatRockSdk_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-StatRockSdk_Example"; path = Pods_StatRockSdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CB73588BE28CDEDC1589BD242708D80 /* StatRockView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatRockView.swift; path = StatRockSdk/Classes/StatRockView.swift; sourceTree = "<group>"; };
+		675466187296BC943B45101E4DF00BEF /* StatRockSdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = StatRockSdk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6886528EEE78F3AA5E8B446F81EAD8CC /* StatRockSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StatRockSdk.release.xcconfig; sourceTree = "<group>"; };
+		6BC65269C0FD92B9273C3397704E6622 /* StatRockSdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StatRockSdk-prefix.pch"; sourceTree = "<group>"; };
+		6E8FB3518865712EF151F3FF25254389 /* StatRockSdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = StatRockSdk.modulemap; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		74CE69C9E14A9CBD3108774280DC7559 /* StatRockSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StatRockSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BBAC54A2BFA5597A1CE663DDD87173E /* Pods-StatRockSdk_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StatRockSdk_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7CCDEEEA3FD5D16CC7E9C94AFB758F84 /* StatRockSdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StatRockSdk-umbrella.h"; sourceTree = "<group>"; };
-		8F42F24C8749885D4BEA1B749046C031 /* Pods-StatRockSdk_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StatRockSdk_Tests-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AD904127312D19C74E4AECB9486C96B8 /* Pods-StatRockSdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StatRockSdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		BF16065E11656937F357770E6FA3053C /* StatRockSdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = StatRockSdk.modulemap; sourceTree = "<group>"; };
-		C52C29FC2BCFF08C0049A45E /* StatRockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatRockView.swift; path = StatRockSdk/Classes/StatRockView.swift; sourceTree = "<group>"; };
-		C52C29FF2BCFF14C0049A45E /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BundleExtension.swift; path = ../StatRockSdk/Classes/BundleExtension.swift; sourceTree = "<group>"; };
-		C52C2A032BCFF1860049A45E /* WKWebViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WKWebViewExtension.swift; path = ../StatRockSdk/Classes/WKWebViewExtension.swift; sourceTree = "<group>"; };
-		C532273D2C4FE99A000E072E /* StatRockScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatRockScrollViewDelegate.swift; path = StatRockSdk/Classes/StatRockScrollViewDelegate.swift; sourceTree = "<group>"; };
-		C5AD4A872C510A8800452954 /* StatRockViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatRockViewContainer.swift; path = StatRockSdk/Classes/StatRockViewContainer.swift; sourceTree = "<group>"; };
-		C5AD4A892C5121D400452954 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = ../StatRockSdk/Classes/UIViewExtension.swift; sourceTree = "<group>"; };
-		D05F07838BCEC2124C99DB524BA75F26 /* StatRockSdk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = StatRockSdk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D11BCB355CEE0D324D0422CD7BCB037A /* StatRockSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StatRockSdk.debug.xcconfig; sourceTree = "<group>"; };
-		E0CFFE777C70C3DA054CC848E99A6254 /* Pods-StatRockSdk_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StatRockSdk_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F56B6DE317C01539119CCA1DF54D8FD7 /* Pods-StatRockSdk_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StatRockSdk_Example-dummy.m"; sourceTree = "<group>"; };
-		FF30069A8EA1260A37C05AC96AC371C1 /* Pods-StatRockSdk_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StatRockSdk_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		74CE69C9E14A9CBD3108774280DC7559 /* StatRockSdk */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StatRockSdk; path = StatRockSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78FBE8FB6A6AB589E614B6609CC92370 /* StatRockViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatRockViewContainer.swift; path = StatRockSdk/Classes/StatRockViewContainer.swift; sourceTree = "<group>"; };
+		7D0EC1B604EAA7601BEAE9E182A659A2 /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = StatRockSdk/Classes/UIViewExtension.swift; sourceTree = "<group>"; };
+		964D574AD1827DDBDE7C6E2357F943AA /* Pods-StatRockSdk_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StatRockSdk_Example-dummy.m"; sourceTree = "<group>"; };
+		9C2DAE22A838FAF4519F7B38091EC099 /* BundleExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleExtension.swift; path = StatRockSdk/Classes/BundleExtension.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B2BF31000A9A7D7D0FB041109AF7F2CD /* WKWebViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKWebViewExtension.swift; path = StatRockSdk/Classes/WKWebViewExtension.swift; sourceTree = "<group>"; };
+		B8B7297AB7A2E07115427742B702057B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C0D153076012B3E5275AA3126C386DBF /* StatRockSdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StatRockSdk-umbrella.h"; sourceTree = "<group>"; };
+		D0FF67AC2C27444F8F803A982873C86E /* Pods-StatRockSdk_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StatRockSdk_Example.modulemap"; sourceTree = "<group>"; };
+		D1B59FB8582F430C785A9DE5418C9D20 /* StatRockSdk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "StatRockSdk-Info.plist"; sourceTree = "<group>"; };
+		DFD3A90DE5117D62A5E93A4F305979F1 /* Pods-StatRockSdk_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StatRockSdk_Example-Info.plist"; sourceTree = "<group>"; };
+		EE4E8BA40FAE6002849E19B2FA8207B9 /* StatRockSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StatRockSdk.debug.xcconfig; sourceTree = "<group>"; };
+		FDBDA36BDBC7CAA25CCF96A3C2947E50 /* StatRockScrollViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatRockScrollViewDelegate.swift; path = StatRockSdk/Classes/StatRockScrollViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		42EAB16D70E73C3FEB028074B23AD748 /* Frameworks */ = {
+		1FF55E9CB0926D6F469443A662612433 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2663D94FFAD34165814A64A855A7B3E4 /* Foundation.framework in Frameworks */,
+				65030FBAA706DA2B898CC7103025E119 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,90 +80,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71300D2FB3B501A5D245DE0344352E9B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				006DA0F02EB0DCD232454449712AAFDD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		004A8DCD00C2BBA5330F99F8DF82C157 /* Pod */ = {
+		28AE2E8AAC894FD18113D51E05971A04 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				3DD1895C33FB3BFBD8FE75058BFC1B34 /* LICENSE */,
-				68967E965159D279D827C8A0DF621127 /* README.md */,
-				D05F07838BCEC2124C99DB524BA75F26 /* StatRockSdk.podspec */,
+				548C03D3E9ABB4FEE62DCAD1ADB07E26 /* LICENSE */,
+				B8B7297AB7A2E07115427742B702057B /* README.md */,
+				675466187296BC943B45101E4DF00BEF /* StatRockSdk.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		12E7BDC323883FA93C34E0EF6EF0E6C5 /* Pods-StatRockSdk_Example */ = {
+		2923D1C52EBC841706FF85A839267B2B /* StatRockSdk */ = {
 			isa = PBXGroup;
 			children = (
-				0EC79F5A0FFE9365511F879A0683135F /* Pods-StatRockSdk_Example.modulemap */,
-				FF30069A8EA1260A37C05AC96AC371C1 /* Pods-StatRockSdk_Example-acknowledgements.markdown */,
-				0AA562BF11EC66514399DC53E494650B /* Pods-StatRockSdk_Example-acknowledgements.plist */,
-				F56B6DE317C01539119CCA1DF54D8FD7 /* Pods-StatRockSdk_Example-dummy.m */,
-				377770DAAF59197A423EA5C0485174DB /* Pods-StatRockSdk_Example-frameworks.sh */,
-				6760D3A3E55725D704A2C4D491EA06B0 /* Pods-StatRockSdk_Example-Info.plist */,
-				5175B8083F67DCAF110A131FF826694B /* Pods-StatRockSdk_Example-umbrella.h */,
-				AD904127312D19C74E4AECB9486C96B8 /* Pods-StatRockSdk_Example.debug.xcconfig */,
-				1DC5604265CD6B712A6F19588E327D97 /* Pods-StatRockSdk_Example.release.xcconfig */,
+				9C2DAE22A838FAF4519F7B38091EC099 /* BundleExtension.swift */,
+				FDBDA36BDBC7CAA25CCF96A3C2947E50 /* StatRockScrollViewDelegate.swift */,
+				5CB73588BE28CDEDC1589BD242708D80 /* StatRockView.swift */,
+				78FBE8FB6A6AB589E614B6609CC92370 /* StatRockViewContainer.swift */,
+				7D0EC1B604EAA7601BEAE9E182A659A2 /* UIViewExtension.swift */,
+				B2BF31000A9A7D7D0FB041109AF7F2CD /* WKWebViewExtension.swift */,
+				28AE2E8AAC894FD18113D51E05971A04 /* Pod */,
+				C5D6DD7D0F9E00CDF6AFA9E09A1BD0A6 /* Support Files */,
 			);
-			name = "Pods-StatRockSdk_Example";
-			path = "Target Support Files/Pods-StatRockSdk_Example";
+			name = StatRockSdk;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		2D20A526CDA648DEEB45CC668B575CF1 /* Support Files */ = {
+		49072F284231823378833A29C20478A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF16065E11656937F357770E6FA3053C /* StatRockSdk.modulemap */,
-				541801F940190117B61D0A128AE8C5E4 /* StatRockSdk-dummy.m */,
-				5FFC24525B254687BB62EAF6EACCB21D /* StatRockSdk-Info.plist */,
-				5B6631226DFFC1698C0E6B5C2D62131E /* StatRockSdk-prefix.pch */,
-				7CCDEEEA3FD5D16CC7E9C94AFB758F84 /* StatRockSdk-umbrella.h */,
-				D11BCB355CEE0D324D0422CD7BCB037A /* StatRockSdk.debug.xcconfig */,
-				34503E7FE472054A70DAB528A0852725 /* StatRockSdk.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/StatRockSdk";
-			sourceTree = "<group>";
-		};
-		3FEA3853380CB1BDB62F6629BC8E1545 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				12E7BDC323883FA93C34E0EF6EF0E6C5 /* Pods-StatRockSdk_Example */,
-				A061CC31A6D6C712010DF19B5DAC4D4B /* Pods-StatRockSdk_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		40986D1CED1F82F213BFD8456149A544 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				57A93EEFE829C9903A689DEAF36E3BDB /* Pods_StatRockSdk_Example.framework */,
-				320F61B3525E5914213BC172FEC73197 /* Pods_StatRockSdk_Tests.framework */,
-				74CE69C9E14A9CBD3108774280DC7559 /* StatRockSdk.framework */,
+				57A93EEFE829C9903A689DEAF36E3BDB /* Pods-StatRockSdk_Example */,
+				74CE69C9E14A9CBD3108774280DC7559 /* StatRockSdk */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56AAA3F19C4DC5F3B9C89C6849F19F98 /* StatRockSdk */ = {
+		4B9BCA59A193235FCE39585852028433 /* Pods-StatRockSdk_Example */ = {
 			isa = PBXGroup;
 			children = (
-				C52C29FE2BCFF10E0049A45E /* Extensions */,
-				004A8DCD00C2BBA5330F99F8DF82C157 /* Pod */,
-				2D20A526CDA648DEEB45CC668B575CF1 /* Support Files */,
-				C52C29FC2BCFF08C0049A45E /* StatRockView.swift */,
-				C532273D2C4FE99A000E072E /* StatRockScrollViewDelegate.swift */,
-				C5AD4A872C510A8800452954 /* StatRockViewContainer.swift */,
+				D0FF67AC2C27444F8F803A982873C86E /* Pods-StatRockSdk_Example.modulemap */,
+				4C5366BE0F85673A2AEB6575A353B66B /* Pods-StatRockSdk_Example-acknowledgements.markdown */,
+				1F62F5EB681D71B9BA6FAD550407EF36 /* Pods-StatRockSdk_Example-acknowledgements.plist */,
+				964D574AD1827DDBDE7C6E2357F943AA /* Pods-StatRockSdk_Example-dummy.m */,
+				4AD0E89ABB1B4D959B982CAA12F02F34 /* Pods-StatRockSdk_Example-frameworks.sh */,
+				DFD3A90DE5117D62A5E93A4F305979F1 /* Pods-StatRockSdk_Example-Info.plist */,
+				16A6FDE78ABBB5BE689DB611C4BBAC01 /* Pods-StatRockSdk_Example-umbrella.h */,
+				36F2C92BE10425309689F0D79F56F33B /* Pods-StatRockSdk_Example.debug.xcconfig */,
+				528964C8BFD32ADCD70F2E6AAD5B5607 /* Pods-StatRockSdk_Example.release.xcconfig */,
 			);
-			name = StatRockSdk;
-			path = ../..;
+			name = "Pods-StatRockSdk_Example";
+			path = "Target Support Files/Pods-StatRockSdk_Example";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -193,40 +143,37 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		A061CC31A6D6C712010DF19B5DAC4D4B /* Pods-StatRockSdk_Tests */ = {
+		B16CA0A913B0902DF3CA3BD8D6A08689 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0B98C086A6BF97B051C05D4617FE8D8C /* Pods-StatRockSdk_Tests.modulemap */,
-				E0CFFE777C70C3DA054CC848E99A6254 /* Pods-StatRockSdk_Tests-acknowledgements.markdown */,
-				7BBAC54A2BFA5597A1CE663DDD87173E /* Pods-StatRockSdk_Tests-acknowledgements.plist */,
-				49C268041EAA8E7AEDBDC0A3CBFA5845 /* Pods-StatRockSdk_Tests-dummy.m */,
-				8F42F24C8749885D4BEA1B749046C031 /* Pods-StatRockSdk_Tests-Info.plist */,
-				1B3E7A10ED30278CCC8D013B22E43953 /* Pods-StatRockSdk_Tests-umbrella.h */,
-				68736C5B1A4263C01384676D29800AA3 /* Pods-StatRockSdk_Tests.debug.xcconfig */,
-				5337F0230A2446289AEC087D399C6394 /* Pods-StatRockSdk_Tests.release.xcconfig */,
+				4B9BCA59A193235FCE39585852028433 /* Pods-StatRockSdk_Example */,
 			);
-			name = "Pods-StatRockSdk_Tests";
-			path = "Target Support Files/Pods-StatRockSdk_Tests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C52C29FE2BCFF10E0049A45E /* Extensions */ = {
+		C5D6DD7D0F9E00CDF6AFA9E09A1BD0A6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C52C29FF2BCFF14C0049A45E /* BundleExtension.swift */,
-				C52C2A032BCFF1860049A45E /* WKWebViewExtension.swift */,
-				C5AD4A892C5121D400452954 /* UIViewExtension.swift */,
+				6E8FB3518865712EF151F3FF25254389 /* StatRockSdk.modulemap */,
+				4D1C0D6E744513D2D32FFA7DC848ED8F /* StatRockSdk-dummy.m */,
+				D1B59FB8582F430C785A9DE5418C9D20 /* StatRockSdk-Info.plist */,
+				6BC65269C0FD92B9273C3397704E6622 /* StatRockSdk-prefix.pch */,
+				C0D153076012B3E5275AA3126C386DBF /* StatRockSdk-umbrella.h */,
+				EE4E8BA40FAE6002849E19B2FA8207B9 /* StatRockSdk.debug.xcconfig */,
+				6886528EEE78F3AA5E8B446F81EAD8CC /* StatRockSdk.release.xcconfig */,
 			);
-			path = Extensions;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/StatRockSdk";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				DA54AF28828D0980C43B41D476F06486 /* Development Pods */,
+				E518ABC6B34F84121382DBBEDB595736 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				40986D1CED1F82F213BFD8456149A544 /* Products */,
-				3FEA3853380CB1BDB62F6629BC8E1545 /* Targets Support Files */,
+				49072F284231823378833A29C20478A2 /* Products */,
+				B16CA0A913B0902DF3CA3BD8D6A08689 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,10 +185,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DA54AF28828D0980C43B41D476F06486 /* Development Pods */ = {
+		E518ABC6B34F84121382DBBEDB595736 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				56AAA3F19C4DC5F3B9C89C6849F19F98 /* StatRockSdk */,
+				2923D1C52EBC841706FF85A839267B2B /* StatRockSdk */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -257,19 +204,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		690882C1E3305403ECD72A49D8CB9180 /* Headers */ = {
+		750EA76BC8260F2100F6F7996EE1E5AC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FF1FFED03EDD8EFB255D58CB5847FCC /* Pods-StatRockSdk_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7EA10BF67B09CBE144475BE096403122 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E85C21AFD62FAA35C4EF4796B1CB57E /* StatRockSdk-umbrella.h in Headers */,
+				584570929AF251EE9DE8BD98075857A8 /* StatRockSdk-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,21 +227,21 @@
 			buildRules = (
 			);
 			dependencies = (
-				4C64E0896D1E170ACF59DBFF4F45C46D /* PBXTargetDependency */,
+				9A95632A50D18331D974DA1CC3852A4C /* PBXTargetDependency */,
 			);
 			name = "Pods-StatRockSdk_Example";
 			productName = Pods_StatRockSdk_Example;
-			productReference = 57A93EEFE829C9903A689DEAF36E3BDB /* Pods_StatRockSdk_Example.framework */;
+			productReference = 57A93EEFE829C9903A689DEAF36E3BDB /* Pods-StatRockSdk_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		721AF778D79F4BD945F4B4A3DEC24695 /* StatRockSdk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC30A213F285F3B67A1B4D4587B5C4D3 /* Build configuration list for PBXNativeTarget "StatRockSdk" */;
+			buildConfigurationList = 2657B4C2539B2B9D30B0E84362E8CC4F /* Build configuration list for PBXNativeTarget "StatRockSdk" */;
 			buildPhases = (
-				7EA10BF67B09CBE144475BE096403122 /* Headers */,
-				A70F9ECEDF1621C50E89D3B3A8F0BA7E /* Sources */,
-				71300D2FB3B501A5D245DE0344352E9B /* Frameworks */,
-				BED8E9144A67DE5B247AF9934B31B7C2 /* Resources */,
+				750EA76BC8260F2100F6F7996EE1E5AC /* Headers */,
+				4DA5AE5EC542E5BE77989AEA418D5E5A /* Sources */,
+				1FF55E9CB0926D6F469443A662612433 /* Frameworks */,
+				6F436AD430A8D46E622F1A200FD22F94 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -310,26 +249,7 @@
 			);
 			name = StatRockSdk;
 			productName = StatRockSdk;
-			productReference = 74CE69C9E14A9CBD3108774280DC7559 /* StatRockSdk.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		799DD63ECB2A6465C46FDE6DB839E238 /* Pods-StatRockSdk_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6D7247A1A7D2E5605D491C9CF8664491 /* Build configuration list for PBXNativeTarget "Pods-StatRockSdk_Tests" */;
-			buildPhases = (
-				690882C1E3305403ECD72A49D8CB9180 /* Headers */,
-				AC0046F0B8FBDCF3583C1B796EBD6EE7 /* Sources */,
-				42EAB16D70E73C3FEB028074B23AD748 /* Frameworks */,
-				4FCB5936DDCEC4331B617EB4539B2A2D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AD3404BEC649B09CE7FBA41502FC707B /* PBXTargetDependency */,
-			);
-			name = "Pods-StatRockSdk_Tests";
-			productName = Pods_StatRockSdk_Tests;
-			productReference = 320F61B3525E5914213BC172FEC73197 /* Pods_StatRockSdk_Tests.framework */;
+			productReference = 74CE69C9E14A9CBD3108774280DC7559 /* StatRockSdk */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -338,9 +258,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -351,19 +270,18 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 40986D1CED1F82F213BFD8456149A544 /* Products */;
+			productRefGroup = 49072F284231823378833A29C20478A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				096DB0614C6ED36B2EE6ED1665FA5AD4 /* Pods-StatRockSdk_Example */,
-				799DD63ECB2A6465C46FDE6DB839E238 /* Pods-StatRockSdk_Tests */,
 				721AF778D79F4BD945F4B4A3DEC24695 /* StatRockSdk */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4FCB5936DDCEC4331B617EB4539B2A2D /* Resources */ = {
+		6F436AD430A8D46E622F1A200FD22F94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,35 +295,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BED8E9144A67DE5B247AF9934B31B7C2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A70F9ECEDF1621C50E89D3B3A8F0BA7E /* Sources */ = {
+		4DA5AE5EC542E5BE77989AEA418D5E5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C532273E2C4FE99A000E072E /* StatRockScrollViewDelegate.swift in Sources */,
-				C5AD4A882C510A8800452954 /* StatRockViewContainer.swift in Sources */,
-				C52C2A042BCFF1860049A45E /* WKWebViewExtension.swift in Sources */,
-				10A9F9B5D83F0F42C37BBD8AA6A7A958 /* StatRockSdk-dummy.m in Sources */,
-				C5AD4A8A2C5121D400452954 /* UIViewExtension.swift in Sources */,
-				C52C29FD2BCFF08C0049A45E /* StatRockView.swift in Sources */,
-				C52C2A002BCFF14C0049A45E /* BundleExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC0046F0B8FBDCF3583C1B796EBD6EE7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7D507458B73D6AE0CFA29D2EDE612BA /* Pods-StatRockSdk_Tests-dummy.m in Sources */,
+				D9CAD3A068D3FF0ACDF74DA7A1B92150 /* BundleExtension.swift in Sources */,
+				344C869FA818500C7C0CC512977EC602 /* StatRockScrollViewDelegate.swift in Sources */,
+				D61184E7F2F1F9C644D60F13E94910CA /* StatRockSdk-dummy.m in Sources */,
+				5EEB8D604CDB9BB291C01D9BE5B106F5 /* StatRockView.swift in Sources */,
+				AC436F838E931054B3B2976F882FDE86 /* StatRockViewContainer.swift in Sources */,
+				2E2BA0AD6C62EBA03C632D3985C88AD4 /* UIViewExtension.swift in Sources */,
+				F57CBEED23A7D135FBAF68AE0294738F /* WKWebViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,117 +323,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4C64E0896D1E170ACF59DBFF4F45C46D /* PBXTargetDependency */ = {
+		9A95632A50D18331D974DA1CC3852A4C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = StatRockSdk;
 			target = 721AF778D79F4BD945F4B4A3DEC24695 /* StatRockSdk */;
-			targetProxy = 50A9C4A84BE3842157766ECDDCA0165A /* PBXContainerItemProxy */;
-		};
-		AD3404BEC649B09CE7FBA41502FC707B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-StatRockSdk_Example";
-			target = 096DB0614C6ED36B2EE6ED1665FA5AD4 /* Pods-StatRockSdk_Example */;
-			targetProxy = 51DE04B5411B143E0C5511ADF00B09E2 /* PBXContainerItemProxy */;
+			targetProxy = ACFE04A5BD57796FED8A2654DA5F3023 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		38FA6BD84902EAA2FAB54BE2D5BCAC40 /* Debug */ = {
+		32167BC09A0AF12E24F4317093D76587 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D11BCB355CEE0D324D0422CD7BCB037A /* StatRockSdk.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/StatRockSdk/StatRockSdk-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/StatRockSdk/StatRockSdk-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/StatRockSdk/StatRockSdk.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
-				PRODUCT_MODULE_NAME = StatRockSdk;
-				PRODUCT_NAME = StatRockSdk;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3E595ACE95C8923F26314440141CB64A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68736C5B1A4263C01384676D29800AA3 /* Pods-StatRockSdk_Tests.debug.xcconfig */;
+			baseConfigurationReference = 528964C8BFD32ADCD70F2E6AAD5B5607 /* Pods-StatRockSdk_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-StatRockSdk_Tests/Pods-StatRockSdk_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StatRockSdk_Tests/Pods-StatRockSdk_Tests.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6AC79126E797478B94A043336947E4F7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DC5604265CD6B712A6F19588E327D97 /* Pods-StatRockSdk_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-StatRockSdk_Example/Pods-StatRockSdk_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-StatRockSdk_Example/Pods-StatRockSdk_Example.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -545,44 +367,7 @@
 			};
 			name = Release;
 		};
-		70C7277EDC27B5060F211842FCAB9524 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD904127312D19C74E4AECB9486C96B8 /* Pods-StatRockSdk_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-StatRockSdk_Example/Pods-StatRockSdk_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StatRockSdk_Example/Pods-StatRockSdk_Example.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -617,148 +402,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		7F3BE296F35EE538DFD0E60FA8D65AF2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5337F0230A2446289AEC087D399C6394 /* Pods-StatRockSdk_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-StatRockSdk_Tests/Pods-StatRockSdk_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StatRockSdk_Tests/Pods-StatRockSdk_Tests.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A314C9E94F57C066F44EBAD05AC911FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34503E7FE472054A70DAB528A0852725 /* StatRockSdk.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/StatRockSdk/StatRockSdk-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/StatRockSdk/StatRockSdk-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/StatRockSdk/StatRockSdk.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
-				PRODUCT_MODULE_NAME = StatRockSdk;
-				PRODUCT_NAME = StatRockSdk;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -774,11 +420,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -786,14 +433,184 @@
 			};
 			name = Debug;
 		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C25655A71EE21950CAFEC0EA46C17FF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE4E8BA40FAE6002849E19B2FA8207B9 /* StatRockSdk.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/StatRockSdk/StatRockSdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StatRockSdk/StatRockSdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StatRockSdk/StatRockSdk.modulemap";
+				PRODUCT_MODULE_NAME = StatRockSdk;
+				PRODUCT_NAME = StatRockSdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D908E31493DF6B4F20077F14631BADBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6886528EEE78F3AA5E8B446F81EAD8CC /* StatRockSdk.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/StatRockSdk/StatRockSdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StatRockSdk/StatRockSdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StatRockSdk/StatRockSdk.modulemap";
+				PRODUCT_MODULE_NAME = StatRockSdk;
+				PRODUCT_NAME = StatRockSdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E590705E92F69411D118669E50DB15AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F2C92BE10425309689F0D79F56F33B /* Pods-StatRockSdk_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StatRockSdk_Example/Pods-StatRockSdk_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StatRockSdk_Example/Pods-StatRockSdk_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2657B4C2539B2B9D30B0E84362E8CC4F /* Build configuration list for PBXNativeTarget "StatRockSdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25655A71EE21950CAFEC0EA46C17FF5 /* Debug */,
+				D908E31493DF6B4F20077F14631BADBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3EE1646EC87F1D805249675E2A68A508 /* Build configuration list for PBXNativeTarget "Pods-StatRockSdk_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				70C7277EDC27B5060F211842FCAB9524 /* Debug */,
-				6AC79126E797478B94A043336947E4F7 /* Release */,
+				E590705E92F69411D118669E50DB15AA /* Debug */,
+				32167BC09A0AF12E24F4317093D76587 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -801,26 +618,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
-				7EE7A78859F657F6BEFC651185B43192 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6D7247A1A7D2E5605D491C9CF8664491 /* Build configuration list for PBXNativeTarget "Pods-StatRockSdk_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E595ACE95C8923F26314440141CB64A /* Debug */,
-				7F3BE296F35EE538DFD0E60FA8D65AF2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BC30A213F285F3B67A1B4D4587B5C4D3 /* Build configuration list for PBXNativeTarget "StatRockSdk" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				38FA6BD84902EAA2FAB54BE2D5BCAC40 /* Debug */,
-				A314C9E94F57C066F44EBAD05AC911FC /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

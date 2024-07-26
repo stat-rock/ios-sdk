@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--In Page View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="InPage" id="Y6W-OH-hqX" customClass="InPageViewController" customModule="StatRockSdk_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAB-PR-gHx">
+                                <rect key="frame" x="16" y="59" width="361" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="no7-uT-8ie">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="1610"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post_1" translatesAutoresizingMaskIntoConstraints="NO" id="6A6-aJ-lca">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="uT4-Di-uIN"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Publisher Opportunity With Outstream Ads" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WM4-Jd-Tb4">
+                                                <rect key="frame" x="0.0" y="200" width="361" height="120"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="Dtc-TI-Wsp"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The Rise of Outstream Video Ads" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eP9-fF-Bcg">
+                                                <rect key="frame" x="0.0" y="320" width="361" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="hcj-Z6-iKX"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qm-28-5FU" customClass="StatRockViewContainer" customModule="StatRockSdk">
+                                                <rect key="frame" x="0.0" y="400" width="361" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="f1c-RR-Pmz"/>
+                                                </constraints>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Key Outstream Benefits for Publishers" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erz-nX-Xyy">
+                                                <rect key="frame" x="0.0" y="600" width="361" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Ctb-pQ-oNj"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustration" translatesAutoresizingMaskIntoConstraints="NO" id="iEP-Wh-Kmd">
+                                                <rect key="frame" x="0.0" y="650" width="361" height="260"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="260" id="B1R-cb-kU3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3v-9X-W9V">
+                                                <rect key="frame" x="0.0" y="910" width="361" height="700"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="700" id="nR8-m6-Z6w"/>
+                                                </constraints>
+                                                <string key="text">&lt;html&gt;
+        &lt;body&gt;
+        As mentioned above, the core advantage of outstream ads is their universal character, i.e. publishers need neither to host video content nor to modify their current advertising stack, to serve such ads.
+        &lt;br /&gt;&lt;br /&gt;
+        Unlike the more conventional in-stream ad units, outstream ads are:
+        &lt;br /&gt;
+        &lt;ul&gt;
+        &lt;li&gt;natively-rendered into a website&lt;/li&gt;
+        &lt;li&gt;optimized for cross-screen display&lt;/li&gt;
+        &lt;li&gt;and highly-viewable for website readers.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;br /&gt;
+        More importantly, the outstream video ad formats are also considerate of user interaction, i.e. the ad launches only when in-view, usually in the “sound off” mode, and collapses automatically upon further page scroll.
+        &lt;br /&gt;&lt;br /&gt;
+        This ensures both the non-intrusive ad experience and higher VTRs.
+        &lt;/body&gt;
+        &lt;/html&gt;</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5Qm-28-5FU" secondAttribute="trailing" id="Lv0-KC-qfO"/>
+                                            <constraint firstItem="5Qm-28-5FU" firstAttribute="leading" secondItem="no7-uT-8ie" secondAttribute="leading" id="kdV-Hv-IfT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="no7-uT-8ie" secondAttribute="bottom" id="MgA-5M-De1"/>
+                                    <constraint firstItem="no7-uT-8ie" firstAttribute="leading" secondItem="WAB-PR-gHx" secondAttribute="leading" id="RLl-W0-KdF"/>
+                                    <constraint firstItem="no7-uT-8ie" firstAttribute="width" secondItem="WAB-PR-gHx" secondAttribute="width" id="U9P-Ob-Mfj"/>
+                                    <constraint firstAttribute="trailing" secondItem="no7-uT-8ie" secondAttribute="trailing" id="bTw-NX-Ebj"/>
+                                    <constraint firstItem="no7-uT-8ie" firstAttribute="top" secondItem="WAB-PR-gHx" secondAttribute="top" id="fNf-PS-yZw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="af5-Zd-a5X"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ez5-h1-Pcg"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WAB-PR-gHx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="F0X-hV-nYi"/>
+                            <constraint firstItem="WAB-PR-gHx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="H3Z-Wd-Lhu"/>
+                            <constraint firstItem="WAB-PR-gHx" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="XgE-Iq-szk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WAB-PR-gHx" secondAttribute="trailing" constant="16" id="fJ2-oB-uTO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="htmlText" destination="y3v-9X-W9V" id="dYM-S8-2ES"/>
+                        <outlet property="scrollView" destination="WAB-PR-gHx" id="NU1-td-J94"/>
+                        <outlet property="statRockView" destination="5Qm-28-5FU" id="esr-oP-qOZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23.664122137404579" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="illustration" width="286" height="216"/>
+        <image name="post_1" width="1200" height="800"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

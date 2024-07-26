@@ -1,5 +1,5 @@
 PODS:
-  - StatRockSdk (0.1.0)
+  - StatRockSdk (1.4.1)
 
 DEPENDENCIES:
   - StatRockSdk (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  StatRockSdk: 115b21f37d2b5fa02ff19406f0019c466a28bc53
+  StatRockSdk: 694791f1deec99a153ee62dafc3f96136b6a3b51
 
-PODFILE CHECKSUM: fd038a6d514faf5fe41278285de12dd2d4bdbb54
+PODFILE CHECKSUM: a3d7222c925712f358bbecbbb0a39b885fc36e2c
 
 COCOAPODS: 1.15.2

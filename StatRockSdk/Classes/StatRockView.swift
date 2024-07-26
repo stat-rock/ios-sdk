@@ -115,7 +115,7 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
     
     public func enoughPercentsForDeactivation(visibilityPercents: Int)->Bool {
         var percents = 30;
-        if let config = config {
+        if config != nil {
             if let config = try? JSONSerialization.jsonObject(with: self.config.data(using: .utf8)!, options: []) {
                 let map = config as? [String:Any]
                 
