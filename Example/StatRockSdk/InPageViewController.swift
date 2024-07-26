@@ -76,7 +76,7 @@ extension String {
             let attributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 19),
                           NSAttributedStringKey.foregroundColor: UIColor.black]
 
-            var attr = try NSMutableAttributedString(data: utfData, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+            let attr = try NSMutableAttributedString(data: utfData, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
             attr.addAttributes(attributes, range: NSRange(location: 0, length: attr.length))
             return attr
         } catch {
