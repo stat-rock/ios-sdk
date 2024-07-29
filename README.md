@@ -29,7 +29,7 @@ pod 'StatRockSdk'
         ])
         
         view.addSubview(player)
-        player.load(placement: <your placement>, delegate: self)
+        player.load(placement: <your placement>, <StatRockType is optional>, delegate: self)
 
 ## License
 
