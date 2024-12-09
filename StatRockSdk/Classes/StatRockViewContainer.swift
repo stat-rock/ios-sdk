@@ -11,7 +11,7 @@ public class StatRockViewContainer: UIView{
     private var statRock: StatRockView!
     private var delegate: StatRockDelegate?
     private var type: StatRockType?
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
@@ -56,6 +56,18 @@ public class StatRockViewContainer: UIView{
             return (100 * Int(CGRectGetHeight(visibleRect))) / Int(frame.height)
         }
         return 0
+    }
+    
+    public func isSticky()->Bool{
+        return statRock.isSticky()
+    }
+    
+    public func getStickySize()->CGSize?{
+        return statRock.getStickySize()
+    }
+    
+    public func getStickyPosition()->String?{
+        return statRock.getStickyPosition()
     }
     
     public func pause(){

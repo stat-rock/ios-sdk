@@ -26,6 +26,7 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
     private var delegate:StatRockDelegate?
     private var changeConfig = false
     private var type: StatRockType?
+    private var mapConfig: [String:Any]?
     
     public init() {
         let config = WKWebViewConfiguration()
@@ -105,6 +106,24 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
                 guard let self = self else { return }
                 self.placement = placement
                 self.config = config
+                do {
+                    self.mapConfig = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+                    if var settings = self.mapConfig!["settings"] as? [String: Any]{
+                        settings["_sdkECB"] = true
+                        self.mapConfig?["settings"] = settings
+                    }
+                    if let mapConfig = self.mapConfig {
+                        do {
+                            let jsonData = try JSONSerialization.data(withJSONObject: mapConfig, options: .prettyPrinted)
+                            if let jsonString = String(data: jsonData, encoding: .utf8) {
+                                self.config = jsonString
+                            }
+                        } catch {
+                        }
+                    }
+                } catch {
+                    print("Error parsing JSON: \(error)")
+                }
                 self.delegate = delegate
                 self.changeConfig = true
                 layoutSubviews()
@@ -113,13 +132,56 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
         task.resume()
     }
     
+    public func isSticky()->Bool{
+        if let mapConfig = self.mapConfig{
+            if let settings = mapConfig["settings"] {
+                let settings = settings as? [String:Any]
+                if let advertising = settings?["advertising"] {
+                    let advertising = advertising as? [String:Any]
+                    if let sticky = advertising?["sticky"] as? Bool {
+                        return sticky
+                    }
+                }
+            }
+        }
+        return false
+    }
+    
+    public func getStickySize()->CGSize?{
+        if let mapConfig = self.mapConfig{
+            if let settings = mapConfig["settings"] {
+                let settings = settings as? [String:Any]
+                if let advertising = settings?["advertising"] {
+                    let advertising = advertising as? [String:Any]
+                    if let sticky = advertising?["sticky"] {
+                        let stickyWidth = advertising?["stickyWidth"] as! String
+                        let stickyHeight = advertising?["stickyHeight"] as! String
+                        return CGSize(width: CGFloat(Double(stickyWidth)!), height: CGFloat(Double(stickyHeight)!))
+                    }
+                }
+            }
+        }
+        return nil
+    }
+    
+    public func getStickyPosition()->String?{
+        if let mapConfig = self.mapConfig{
+            if let settings = mapConfig["settings"] {
+                let settings = settings as? [String:Any]
+                if let advertising = settings?["advertising"] {
+                    let advertising = advertising as? [String:Any]
+                    return advertising?["position"] as? String;
+                }
+            }
+        }
+        return nil
+    }
+    
     public func enoughPercentsForDeactivation(visibilityPercents: Int)->Bool {
         var percents = 30;
         if self.config != nil {
-            if let config = try? JSONSerialization.jsonObject(with: self.config.data(using: .utf8)!, options: []) {
-                let map = config as? [String:Any]
-                
-                if let settings = map?["settings"] {
+            if let mapConfig = self.mapConfig {
+                if let settings = mapConfig["settings"] {
                     let settings = settings as? [String:Any]
                     if let advertising = settings?["advertising"] {
                         let advertising = advertising as? [String:Any]
@@ -156,10 +218,9 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
         if let _ = placement, changeConfig {
             changeConfig = false
             
-            if let config = try? JSONSerialization.jsonObject(with: self.config.data(using: .utf8)!, options: []) {
-                let map = config as? [String:Any]
-                let player = map?["player"] as! String
-                let script = map?["script"] as! String
+            if let mapConfig = self.mapConfig{
+                let player = mapConfig["player"] as! String
+                let script = mapConfig["script"] as! String
                 let body = self.getVideoJSMarkup(player: player, script: script, config: self.config)
                 loadHTMLString(body, baseURL:nil)
             }

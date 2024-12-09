@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StatRockSdk'
-  s.version          = '1.4.1'
+  s.version          = '1.4.2'
   s.summary          = 'The StatRock SDK.'
   s.description      = 'The SDK allows to integrate video ads into native IOS applications.'
 
