@@ -38,6 +38,7 @@ Implement the `StatRockDelegate` protocol to receive ad callbacks:
 
 ```swift
 extension YourViewController: StatRockDelegate {
+
     func onAdLoaded() {
         // Ad has been loaded
     }
