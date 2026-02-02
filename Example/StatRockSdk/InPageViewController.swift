@@ -60,8 +60,8 @@ extension InPageViewController: StatRockDelegate{
         print("onAdStopped ")
     }
     
-    func onAdError(msg: String?) {
-        print("onAdError \(msg ?? "")")
+    func onAdError(errorType: AdErrorType, errorMessage: String?) {
+        print("onAdError type: \(errorType.rawValue), message: \(errorMessage ?? "")")
     }
 }
 

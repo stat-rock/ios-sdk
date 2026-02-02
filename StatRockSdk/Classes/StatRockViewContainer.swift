@@ -98,7 +98,7 @@ extension StatRockViewContainer: StatRockDelegate{
         delegate?.onAdStopped()
     }
     
-    public func onAdError(msg: String?) {
-        delegate?.onAdError(msg: msg)
+    public func onAdError(errorType: AdErrorType, errorMessage: String?) {
+        delegate?.onAdError(errorType: errorType, errorMessage: errorMessage)
     }
 }

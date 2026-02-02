@@ -8,12 +8,13 @@ import WebKit
 import JavaScriptCore
 import AppTrackingTransparency
 import CoreLocation
+import SystemConfiguration
 
 public protocol StatRockDelegate {
     func onAdLoaded()
     func onAdStarted()
     func onAdStopped()
-    func onAdError(msg: String?)
+    func onAdError(errorType: AdErrorType, errorMessage: String?)
 }
 
 public enum StatRockType{
@@ -21,12 +22,17 @@ public enum StatRockType{
 }
 
 public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler {
+    private static let HTTP_TIMEOUT_SECONDS: TimeInterval = 10
+    private static let AD_LOAD_TIMEOUT_SECONDS: TimeInterval = 15
+    
     private var placement:String!
     private var config:String!
     private var delegate:StatRockDelegate?
     private var changeConfig = false
     private var type: StatRockType?
     private var mapConfig: [String:Any]?
+    private var adLoadStarted = false
+    private var adLoadTimeoutTimer: Timer?
     
     public init() {
         let config = WKWebViewConfiguration()
@@ -63,9 +69,20 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
     
     public func load(placement: String, type: StatRockType? = nil, delegate: StatRockDelegate? = nil){
         self.type = type
+        self.delegate = delegate
+        
+        // Cancel any existing timeout
+        cancelAdLoadTimeout()
+        adLoadStarted = false
         
         if type == StatRockType.inPage{
             isHidden = true
+        }
+        
+        // Check internet connection before making request
+        if !isNetworkAvailable() {
+            self.delegate?.onAdError(errorType: .noInternet, errorMessage: "No internet connection available")
+            return
         }
         
         let deviceId = UIDevice.current.identifierForVendor!.uuidString
@@ -99,11 +116,45 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
                                     URLQueryItem(name: "LAT", value: String(lat)),
                                     URLQueryItem(name: "LON", value: String(lon))]
         let url = urlComponents.url!
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else { return }
-            let config = String(decoding: data, as: UTF8.self)
+        
+        // Configure URLSession with timeout
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = StatRockView.HTTP_TIMEOUT_SECONDS
+        sessionConfig.timeoutIntervalForResource = StatRockView.HTTP_TIMEOUT_SECONDS
+        let session = URLSession(configuration: sessionConfig)
+        
+        let task = session.dataTask(with: url) {(data, response, error) in
             DispatchQueue.main.async() {[weak self] in
                 guard let self = self else { return }
+                
+                if let error = error {
+                    // Handle timeout and network errors
+                    let errorType: AdErrorType
+                    let errorMessage: String
+                    
+                    if (error as NSError).code == NSURLErrorTimedOut {
+                        errorType = .timeout
+                        errorMessage = "Ad request timeout: \(error.localizedDescription)"
+                    } else if (error as NSError).code == NSURLErrorNotConnectedToInternet ||
+                              (error as NSError).code == NSURLErrorCannotFindHost ||
+                              (error as NSError).code == NSURLErrorCannotConnectToHost {
+                        errorType = .noInternet
+                        errorMessage = "No internet connection: \(error.localizedDescription)"
+                    } else {
+                        errorType = .networkError
+                        errorMessage = error.localizedDescription
+                    }
+                    
+                    self.delegate?.onAdError(errorType: errorType, errorMessage: errorMessage)
+                    return
+                }
+                
+                guard let data = data else {
+                    self.delegate?.onAdError(errorType: .networkError, errorMessage: "No data received")
+                    return
+                }
+                
+                let config = String(decoding: data, as: UTF8.self)
                 self.placement = placement
                 self.config = config
                 do {
@@ -124,9 +175,10 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
                 } catch {
                     print("Error parsing JSON: \(error)")
                 }
-                self.delegate = delegate
                 self.changeConfig = true
                 layoutSubviews()
+                // Start timeout handler after WebView loads
+                self.startAdLoadTimeout()
             }
         }
         task.resume()
@@ -267,8 +319,12 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
             if let event = messageBody["event"] as? String {
                 switch(event){
                 case "AdLoaded":
+                    self.adLoadStarted = true
+                    self.cancelAdLoadTimeout()
                     self.delegate?.onAdLoaded()
                 case "AdStarted":
+                    self.adLoadStarted = true
+                    self.cancelAdLoadTimeout()
                     if type == StatRockType.inPage{
                         isHidden = false
                     }
@@ -279,7 +335,11 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
                     }
                     self.delegate?.onAdStopped()
                 case "AdError":
-                    self.delegate?.onAdError(msg: messageBody["message"] as? String)
+                    self.cancelAdLoadTimeout()
+                    // Convert string to enum for compatibility with JavaScript bridge
+                    let errorMessage = messageBody["message"] as? String
+                    let errorType = AdErrorType.fromString(errorMessage)
+                    self.delegate?.onAdError(errorType: errorType, errorMessage: messageBody["error"] as? String)
                 default:
                     break
                 }
@@ -296,6 +356,48 @@ public class StatRockView : WKWebView, WKUIDelegate, WKNavigationDelegate, WKScr
                         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         decisionHandler(.allow)
         return
+    }
+    
+    private func isNetworkAvailable() -> Bool {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        guard let defaultRouteReachability = withUnsafePointer(to: &zeroAddress, {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {
+                SCNetworkReachabilityCreateWithAddress(nil, $0)
+            }
+        }) else {
+            return false
+        }
+        
+        var flags: SCNetworkReachabilityFlags = []
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) {
+            return false
+        }
+        
+        let isReachable = flags.contains(.reachable)
+        let needsConnection = flags.contains(.connectionRequired)
+        
+        return isReachable && !needsConnection
+    }
+    
+    private func startAdLoadTimeout() {
+        cancelAdLoadTimeout()
+        adLoadStarted = false
+        
+        adLoadTimeoutTimer = Timer.scheduledTimer(withTimeInterval: StatRockView.AD_LOAD_TIMEOUT_SECONDS, repeats: false) { [weak self] _ in
+            guard let self = self else { return }
+            if !self.adLoadStarted {
+                print("Ad load timeout: no response from ad network")
+                self.delegate?.onAdError(errorType: .timeout, errorMessage: "Ad load timeout: no response from ad network")
+            }
+        }
+    }
+    
+    private func cancelAdLoadTimeout() {
+        adLoadTimeoutTimer?.invalidate()
+        adLoadTimeoutTimer = nil
     }
 }
 
